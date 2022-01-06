@@ -12,3 +12,18 @@ def curso (self):
     documentoDeTexto = f"--->Curso: {curso.nombre} Camada: {curso.camada}"
 
     return HttpResponse(documentoDeTexto)
+
+def inicio(self):
+    return HttpResponse ("vista inicio")
+
+def cursos(self):
+    return HttpResponse ("vista cursos")    
+
+def profesores(self):
+    return HttpResponse ("vista profesores")
+
+def estudiantes(self):
+    return HttpResponse ("vista estudiantes")
+
+def entregables(self):
+    return HttpResponse ("vista entregables")
