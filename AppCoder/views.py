@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, request
 from AppCoder.models import Curso
 
 
@@ -13,17 +13,18 @@ def curso (self):
 
     return HttpResponse(documentoDeTexto)
 
-def inicio(self):
-    return HttpResponse ("vista inicio")
+def inicio(request):
+    #return HttpResponse ("vista inicio")
+    return render(request, "AppCoder/inicio.html")
 
-def cursos(self):
-    return HttpResponse ("vista cursos")    
+def cursos(request):
+    return render(request, "AppCoder/cursos.html")
 
-def profesores(self):
-    return HttpResponse ("vista profesores")
+def profesores(request):
+    return render(request, "AppCoder/profesores.html")
 
-def estudiantes(self):
-    return HttpResponse ("vista estudiantes")
+def estudiantes(request):
+    return render(request, "AppCoder/estudiantes.html")
 
-def entregables(self):
-    return HttpResponse ("vista entregables")
+def entregables(request):
+    return render(request, "AppCoder/entregables.html")
